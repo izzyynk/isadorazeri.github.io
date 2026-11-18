@@ -1,0 +1,682 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Uncial+Antiqua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: #fafffc;
+    text-align: center;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}   
+
+/* --- Header e Navegação --- */
+header {
+    background: #ffffff; 
+    padding: 20px 30px; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+header section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+b {
+    color: #4a2e2e;
+}
+
+h1 {
+    font-family: "Stack Sans Notch", sans-serif;
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin: 0;
+    line-height: 1.1;
+}
+
+h1 span {
+    display: block;
+}
+
+.web {
+    text-align: center;
+    font-size: 0.6em;
+    color: #2E8B57;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav.menu {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #383737;
+    font-size: 1.1em;
+    font-family: "Cinzel", serif;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #2E8B57;
+}
+
+/* --- Card de Perfil (Ajustado para evitar sobreposição da foto) --- */
+.card {
+    max-width: 600px;
+    margin: 40px auto 20px auto;
+    background-color: #e2eedd;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.card img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    border: 4px solid #ffffff;
+    margin-bottom: 20px;
+}
+
+.name {
+    width: 100%;
+    border-radius: 10px;
+    background: #ffffff;
+    padding: 15px;
+    box-sizing: border-box;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.name h2 {
+    font-family: "Cinzel", serif;
+    color: #2c3e50;
+    font-size: 1.6em;
+    margin: 0;
+}
+
+/* --- Seções Gerais --- */
+.presentation {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 25px 30px;
+    border-radius: 15px;
+    background-color: #c7e8c7;
+    box-shadow: 0 4px 12px rgba(57, 70, 56, 0.15);
+    line-height: 1.6;
+}
+
+.presentation p {
+    margin: 0;
+    color: #2f3e35;
+    font-size: 1.05em;
+}
+
+.infos {
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    margin: 20px auto;
+    background-color: #d1eed1;
+    border-radius: 10px;
+    font-size: 0.95em;
+}
+
+.left-card, .right-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.left-card { align-items: flex-start; text-align: left; }
+.right-card { align-items: flex-end; text-align: right; }
+
+.left-card p, .right-card p {
+    margin: 0;
+    color: #4a2e2e;
+}
+
+/* --- Grids de Conteúdo (Formação e Conhecimentos) --- */
+.grade-col {
+    max-width: 640px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0;
+    margin: 20px auto;
+}
+
+.coltitle {
+    font-family: "Cinzel", serif;
+    color: #4a2e2e;
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(74, 46, 46, 0.15);
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.left-col {
+    width: 45%;
+    background-color: #c7e8c7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.left-col p {
+    margin: 6px 0;
+    color: #4a2e2e;
+    font-size: 0.95em;
+}
+
+.right-col {
+    width: 55%;
+    background-color: #fff4d4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.right-col ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.right-col li {
+    margin: 6px 0;
+    color: #4a2e2e;
+    font-size: 0.95em;
+}
+
+/* --- Detalhes (Habilidades, Conquistas, Idiomas) --- */
+.details {
+    max-width: 640px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 0;
+    margin: 20px auto;
+}
+
+.habilities, .conquists, .languages {
+    background-color: #c7e8c7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.habilities { width: 32%; align-items: flex-start; text-align: left; }
+.conquists { width: 36%; }
+.languages { width: 32%; align-items: flex-start; text-align: left; }
+
+.habilities ul, .languages ul {
+    padding-left: 20px;
+    margin: 0;
+    width: 100%;
+}
+
+.habilities li, .languages li {
+    margin: 6px 0;
+    color: #4a2e2e;
+    font-size: 0.95em;
+}
+
+.languages p {
+    margin: 2px 0 8px 0;
+    color: #555;
+    font-size: 0.9em;
+    padding-left: 20px;
+}
+
+.conquists details {
+    width: 100%;
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.conquists summary {
+    cursor: pointer;
+    color: #4a2e2e;
+    outline: none;
+    font-size: 0.95em;
+}
+
+.conquists p {
+    margin: 8px 0 4px 0;
+    color: #4a2e2e;
+    font-size: 0.9em;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* --- Seção Experiência --- */
+.experience {
+    max-width: 640px;
+    display: flex;
+    flex-direction: column; 
+    align-items: stretch;    
+    text-align: left;     
+    margin: 30px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #fff4d4;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    line-height: 1.6;
+    color: #4a2e2e;
+}
+
+.experience p {
+    margin: 15px 0 5px 0;
+}
+
+.experience p:first-of-type {
+    margin-top: 0;
+}
+
+/* --- Rodapé --- */
+footer {
+    margin-top: 50px;
+    background: #4a544e; 
+    padding: 20px; 
+    text-align: center;
+}
+
+footer p {
+    color: #ffffff;
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* --- Sidebar / Menu Lateral --- */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #9FC3B3;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.3s;   
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Cinzel", serif;
+    color: #383737;
+    transition: 0.2s;
+    text-align: left;
+}
+
+.sidebar a:hover {
+    background-color: #c7e8c7;
+    padding-left: 35px;
+}
+
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px !important;
+}
+
+.openbtn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.openbtn:hover {
+    background-color: #e2eedd;
+}
+
+.openbtn img {
+    width: 32px;
+    transition: transform 0.2s;
+}
+
+.openbtn img:hover {
+    transform: scale(1.1);
+}
+
+/* --- Responsividade para Dispositivos Móveis --- */
+@media (max-width: 680px) {
+    header section {
+        flex-direction: row-reverse;
+    }
+    .grade-col, .details {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+    .left-col, .right-col, .habilities, .conquists, .languages {
+        width: 100% !important;
+    }
+    .infos {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 90%;
+    }
+    .left-card, .right-card {
+        align-items: center;
+        text-align: center;
+    }
+
+}
+/* --- Seção do Portfólio & Carrossel Estilizado --- */
+.portfolio-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.coltitle-carousel {
+    font-family: "Cinzel", serif;
+    color: #4a2e2e;
+    font-size: 1.6em;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid rgba(74, 46, 46, 0.15);
+    padding-bottom: 10px;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.carousel-window {
+    overflow: hidden;
+    width: 100%;
+    padding: 15px 5px;
+}
+
+/* --- Ajustes para o Movimento Infinito Real --- */
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    width: 100%; /* O tamanho agora se adapta dinamicamente aos filhos */
+}
+
+.carousel-item {
+    /* Exibe exatamente 3 itens por vez na tela (100% / 3 = 33.333%) */
+    flex: 0 0 33.333%; 
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+
+/* Responsividade para Celular (Mostra 1 por vez de forma infinita) */
+@media (max-width: 768px) {
+    .carousel-item {
+        flex: 0 0 100%;
+    }
+}
+
+/* Card Interno das Imagens */
+.carousel-card {
+    display: block;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(199, 232, 199, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.carousel-card:hover {
+    transform: translateY(-5px); /* Efeito flutuante ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(74, 84, 78, 0.15);
+    border-color: #c7e8c7;
+}
+
+.carousel-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Recorta proporcionalmente sem distorcer a imagem */
+    border-radius: 8px;
+    background-color: #f7f9f8;
+}
+
+.carousel-game-cover {
+    height: 180px;
+    border-radius: 8px;
+    background: #171d24;
+    color: #70f0d0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.carousel-game-cover span {
+    color: #f3c969;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.7em;
+    font-weight: 700;
+}
+
+.carousel-game-cover strong {
+    font-family: 'Cinzel', serif;
+    font-size: 1.35em;
+}
+
+/* --- Estilização dos Textos do Card do Carrossel --- */
+.carousel-card h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    color: #4a2e2e;
+    margin: 12px 0 6px 0;
+}
+
+.carousel-card p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85em;
+    line-height: 1.4;
+    color: #555555;
+    margin: 0 0 8px 0;
+    padding: 0 5px;
+    text-align: center;
+}
+
+/* Botões Modernos e Flutuantes (Setas) */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffffff;
+    color: #4a2e2e;
+    border: 1px solid rgba(74, 46, 46, 0.1);
+    font-size: 18px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: #c7e8c7;
+    color: #2c3e50;
+    box-shadow: 0 5px 15px rgba(46, 139, 87, 0.2);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev {
+    left: -22px; /* Flutua ligeiramente para fora do container esquerdo */
+}
+
+.carousel-btn.next {
+    right: -22px; /* Flutua ligeiramente para fora do container direito */
+}
+
+/* Ajuste Responsivo para Telas Pequenas (Celular) */
+@media (max-width: 768px) {
+    .carousel-item {
+        flex: 0 0 100%; /* Exibe 1 imagem por vez no celular */
+    }
+    .carousel-track {
+        width: 500%;
+    }
+    .carousel-btn.prev { left: 5px; }
+    .carousel-btn.next { right: 5px; }
+}
+
+/* --- Estilos da Janela Pop-up (Modal) --- */
+.carousel-card {
+    cursor: pointer; /* Transmite visualmente que o card é clicável */
+}
+
+.modal {
+    display: none; /* Mantém o pop-up escondido por padrão */
+    position: fixed;
+    z-index: 200; /* Fica por cima do menu lateral e de tudo na página */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro transparente */
+    backdrop-filter: blur(4px); /* Suave desfoque no fundo */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #FAFFFC;
+    margin: auto;
+    padding: 30px;
+    border-radius: 16px;
+    width: 85%;
+    max-width: 750px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: popupIn 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Animação para o Pop-up surgir elegantemente de baixo para cima */
+@keyframes popupIn {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #4a2e2e;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: #2E8B57;
+}
+
+.modal-body {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.modal-body img {
+    width: 45%;
+    max-height: 300px;
+    object-fit: contain;
+    background: #f0f3f1;
+    border-radius: 8px;
+    border: 1px solid rgba(199, 232, 199, 0.5);
+}
+
+.modal-text {
+    width: 55%;
+}
+
+.modal-text h2 {
+    font-family: 'Cinzel', serif;
+    color: #4a2e2e;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.modal-text p {
+    font-family: 'Roboto', sans-serif;
+    color: #444444;
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsividade do Pop-up para celular */
+@media (max-width: 680px) {
+    .modal-body {
+        flex-direction: column;
+        text-align: center;
+    }
+    .modal-body img, .modal-text {
+        width: 100%;
+    }
+}
